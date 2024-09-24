@@ -30,7 +30,7 @@ export default function RootLayout({
       <body
         className={`${courier.className} antialiased`}
       >
-        <div>
+        <div className="pb-12">
         {children}
         </div>
         <Footer/>

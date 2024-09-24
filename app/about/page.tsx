@@ -1,11 +1,16 @@
+"use client";
+
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+import Image from "next/image";
+
 const AboutPage = () => {
     return (
-        <div className='py-32'>
+        <div className='relative py-32'>
             <h1 className='w-full text-center text-4xl pb-16 text-green'>
                 Vem är jag?
             </h1>
             <div className='grid grid-cols-2 gap-8 max-w-[1024px] mx-auto'>
-                <article className='col-start-1  flex flex-col gap-8 text-purple'>
+                <article className='col-start-1 row-start-1  flex flex-col gap-8 text-purple'>
                     <cite className='text-3xl'>
                         “Ibland måste man låta ambitionerna vila”
                     </cite>
@@ -16,8 +21,16 @@ const AboutPage = () => {
                         eller inget.
                     </p>
                 </article>
+                <div className='col-start-1 col-span-2  row-start-1 row-span-2'>
+                    <DotLottieReact
+                        src='/Notes.lottie'
+                        loop
+                        autoplay
+                        style={{}}
+                    />
+                </div>
                 <article className='col-start-2 row-start-2 flex flex-col gap-8 text-brown'>
-                    <h2 className='text-3xl'>
+                    <h2 className='text-2xl'>
                         Jag älskar att sjunga i kör och har gjort det större
                         delen av mitt liv.{" "}
                     </h2>
@@ -55,6 +68,15 @@ const AboutPage = () => {
                         samlas för att flytta söderut på hösten.
                     </p>
                 </article>
+                <div className=' col-start-2 row-start-3'>
+                    <Image
+                        src='/flowers.jpg'
+                        width={492.8}
+                        height={326.4}
+                        alt='Orange blommor i närbild'
+                        className="rounded-lg ml-10 mt-10" 
+                    />
+                </div>
             </div>
         </div>
     );
