@@ -6,7 +6,7 @@ import Image from "next/image";
 const AboutPage = () => {
     return (
         <div className='relative py-32'>
-            <h1 className='w-full text-center text-4xl pb-16 text-green'>
+            <h1 className='w-full text-center pb-16 text-green'>
                 Vem är jag?
             </h1>
             <div className='grid grid-cols-2 gap-8 max-w-[1024px] mx-auto'>
@@ -30,7 +30,7 @@ const AboutPage = () => {
                     />
                 </div>
                 <article className='col-start-2 row-start-2 flex flex-col gap-8 text-brown'>
-                    <h2 className='text-2xl'>
+                    <h2 className=''>
                         Jag älskar att sjunga i kör och har gjort det större
                         delen av mitt liv.{" "}
                     </h2>
@@ -56,7 +56,7 @@ const AboutPage = () => {
                     </p>
                 </article>
                 <article className='col-start-1 row-start-3 flex flex-col gap-8 text-purple'>
-                    <h2 className='text-3xl'>Naturen ger mig kraft</h2>
+                    <h2 className=''>Naturen ger mig kraft</h2>
                     <p>
                         Naturen har alltid varit viktig för mig. Där hittar jag
                         lugnet och kan ladda batterierna. Doften av skog, suset
