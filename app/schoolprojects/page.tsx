@@ -1,15 +1,14 @@
 
-
 import { ProjectItem } from "../components/ProjectItem";
 
 
 const SchoolProjectsPage = () => {
     
     return (
-        <div className='relative py-32 min-h-svh'>
+        <div className='relative py-32 mx-2 min-h-svh'>
             <h1 className='w-full text-center pb-16 text-green'>Skolprojekt</h1>
             <div className=" mx-auto">
-                <ul className=" flex flex-col gap-16 justify-center items-center xl:flex-row  xl:pt-12">
+                <ul className=" flex flex-col gap-16 justify-center items-center 2xl:flex-row 2xl:items-start  xl:pt-12">
                     {data.map((item) => (
                         <ProjectItem key={item.title} {...item} />
                     ))}
@@ -27,6 +26,7 @@ const data = [
         description:
             "Individuellt projekt (betygsatt). Överdrivna animationer med framer motion och presentation av statistik med hjälp av chart.js.",
         link: "https://queankan.github.io/moviestats/#/",
+        
     },
     {
         title: "Pokémon team manager",

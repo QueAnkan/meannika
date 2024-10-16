@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const AboutPage = () => {
     return (
-        <div className='relative py-32'>
+        <div className='relative py-32 px-4'>
             <h1 className='w-full text-center pb-16 text-green'>
                 Vem är jag?
             </h1>

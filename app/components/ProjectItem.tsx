@@ -5,7 +5,7 @@ interface ProjectItemProps {
 }
 
 export const ProjectItem = ({ title, description, link }: ProjectItemProps) => (
-    <li className='max-w-96 '>
+    <li className='min-w-72 max-w-80 md:max-w-96 '>
         <article
             className='
 		flex flex-col gap-2'
@@ -22,14 +22,14 @@ export const ProjectItem = ({ title, description, link }: ProjectItemProps) => (
             >
                 {description}
             </p>
-            <a
-                href={link}
-                target='_blank'
-                className='
-			text-blue'
-            >
-                {link}
-            </a>
+            <p>Kolla in:
+                <a
+                    href={link}
+                    target='_blank'
+                    className='
+			text-blue underline decoration-solid'
+                > {title} </a>
+            </p>
         </article>
     </li>
 );

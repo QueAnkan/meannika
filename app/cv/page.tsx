@@ -1,6 +1,5 @@
 "use client";
 
-import { link } from "fs";
 import { useState } from "react";
 import { RiArrowUpWideLine } from "react-icons/ri";
 
@@ -25,24 +24,24 @@ interface CVItemsProps {
     heading: string;
     item?: {
         title: string;
-        year: string;
-        place: string;
-        description: string;
-        link: string;
+        year?: string;
+        place?: string;
+        description?: string;
+        link?: string;
     }[];
 }
 
 const CVItems = ({ heading, item }: CVItemsProps) => {
     const [show, setShow] = useState(false);
 
-    const showClass = show ? "block" : "hidden";
+    const showClass = show ? "block" : "hidden";  
 
     const open = () => {
         setShow(!show);
     };
 
     return (
-        <li className='flex-1 flex flex-col justify-center items-center text-brown'>
+        <li className='flex-1 flex flex-col justify-center items-center text-green'>
             <div className='w-[600px] h-fit p-4 rounded-md border border-gray-500'>
                 <div
                     onClick={open}
@@ -64,7 +63,7 @@ const CVItems = ({ heading, item }: CVItemsProps) => {
                                     {item.title}
                                 </h4>
 
-                                <span className='inline-block w-px bg-brown'></span>
+                                <span className='inline-block w-px bg-green'></span>
                                 <p>{item.year}</p>
                             </div>
                             <p className=' text-purple'>{item.place}</p>

@@ -42,6 +42,18 @@ body {
   }
 }
 
+@layer components {
+  
+
+  .backgroundArrow {
+    background: url('/arrow.svg') no-repeat;
+    background-size: 100%;
+    background-position: center;
+    width: 450px ;
+    aspect-ratio: auto 450 / 195;
+  }
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
