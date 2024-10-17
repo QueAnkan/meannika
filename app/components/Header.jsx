@@ -1,11 +1,15 @@
+"use client"
 import Link from 'next/link';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
+import { useState } from 'react';
+import  { Navigationlinks, navigationData } from './Navigation';
 
 
 const Header = () => {
   return (
-	<header className='w-full fixed
-	bg-transparent flex justify-start z-50'>
+	<header className='absolute w-full 
+	bg-transparent flex justify-between items-center z-50'>
 		<Link href='/' alt="Till startsidan" >
 	 <div className=' flex  rounded-full w-20 h-20 overflow-hidden p-2 bg-blue m-4
 	  '>
@@ -13,7 +17,59 @@ const Header = () => {
 	
 		</div>
 		</Link>
+		<div className=' relative p-8 mr-4'>
+			<Hamburger/>
+			{/* <motion.div className='h-1 w-8 rounded-full bg-blue'></motion.div>
+			<motion.div className='h-1 w-8 rounded-full bg-blue'></motion.div>
+			<motion.div className='h-1 w-8 rounded-full bg-blue'></motion.div>*/}
+		</div> 
 	</header>
   );
 }
 export default Header;
+
+
+const Hamburger = () => {
+	const [isOpen, setIsOpen] = useState(false);
+
+	const handleClick = () => {
+		if(!isOpen){
+			setIsOpen(true);
+		}else{
+			setIsOpen(false);
+		}
+	}
+	
+	return (
+		
+
+		<div className='relative'>
+			<div onClick={handleClick} className=' relative z-60  flex flex-col justify-between h-6 w-8 cursor-pointer '>
+				<motion.div 
+				animate={isOpen ? {rotate: 45, translateY: 10} : {rotate: 0, translateY: 0}}
+				className='h-1 w-full rounded-full bg-blue '></motion.div>
+				<motion.div 
+				animate={isOpen ? {opacity: 0} : {opacity: 1}}
+				className='h-1 w-full rounded-full bg-blue'></motion.div>
+				<motion.div 
+				animate={isOpen ? {rotate: -45, translateY: -10} : {rotate: 0, translateY: 0}}
+				className='h-1 w-full rounded-full bg-blue'></motion.div>
+			</div>
+			{isOpen && <Menu/>}
+		</div>
+	)
+}
+
+const Menu = () => {
+	return (
+		<div className='fixed top-0 right-0 h-1 w-80 overflow-visible
+		 bg-black z-10'>
+			 <motion.ul className=' z-20 flex flex-col gap-8  p-16 h-svh w-80 bg-black justify-start items-left text-left text-2xl text-blue'
+            >
+                {navigationData.map((item) => (
+                    <Navigationlinks key={item.title} {...item} />
+                ))}
+            </motion.ul>
+		</div>
+	)
+}

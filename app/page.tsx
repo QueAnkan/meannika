@@ -1,36 +1,25 @@
 "use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
-
-interface PresentationListItemProps {
-    title: string;
-    description: string;
-}
-
-const PresentationListItem = ({
-    title,
-    description,
-}: PresentationListItemProps) => (
-    <li className='flex flex-col lg:gap-3 lg:flex-row'>
-        <h4 className='text-green'>{title}: </h4>
-        <p>{description}</p>
-    </li>
-);
+import { PresentationListItem } from "./components/PresentationListItem";
+import { title } from "process";
 
 export default function Home() {
     return (
-        <div className='pb-32 pt-16 max-w-screen'>
+        <div className='pb-32 pt- max-w-screen'>
             <main className=' flex flex-col w-full'>
                 <div className='min-h-svh px-8 sm:px-28'>
-                    <div className='flex flex-col place-items-center mx-auto sm:grid grid-cols-12 sm:gap-8 '>
+                    <div className='flex flex-col place-items-center mx-auto sm:grid grid-cols-12 sm:gap-2 '>
                         <motion.div
-                            animate={{ x: 0 }}
-                            initial={{ x: -5000 }}
+                            initial={{ opacity: 0, scale: 0.5 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            /* animate={{ x: 0, y: 0, opacity: 1 }}
+                            initial={{ x: -5000, y: -4000, opacity: 0 }} */
                             transition={{
-                                duration: 2,
+                                duration: 1,
                                 ease: [0, 0.71, 0.2, 1.01],
                             }}
-                            className='hidden sm:flex items-center max-w-80 min-w-60 h-fit rounded-xl overflow-hidden col-span-3'
+                            className='hidden sm:flex items-center max-w-80 min-w-60 h-fit rounded-sm overflow-hidden col-span-3'
                         >
                             <Image
                                 src='/train-gear.jpg'
@@ -47,8 +36,8 @@ export default function Home() {
                             animate={{ x: 0 }}
                             initial={{ x: -5000 }}
                             transition={{
-                                duration: 4,
-                                delay: 0.6,
+                                duration: 2,
+                                // delay: 0.2,
                                 easing: "easeOut",
                                 // ease: [0, 0.71, 0.2, 1.01],
                             }}
@@ -60,14 +49,16 @@ export default function Home() {
                             </h1>
                         </motion.div>
                         <motion.div
-                            animate={{ x: 0 }}
-                            initial={{ x: 5000 }}
+                            initial={{ opacity: 0, scale: 0.5 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            /* animate={{ x: 0, y: 0 }}
+                            initial={{ x: 5000, y: 4000 }} */
                             transition={{
-                                duration: 2,
+                                duration: 1,
                                 delay: 0.3,
                                 ease: [0, 0.71, 0.2, 1.01],
                             }}
-                            className='hidden sm:flex items-center max-w-80 min-w-60 h-fit rounded-xl overflow-hidden col-span-3'
+                            className='hidden sm:flex items-center max-w-80 min-w-60 h-fit rounded-sm overflow-hidden col-span-3'
                         >
                             <Image
                                 src='/code.jpg'
@@ -84,10 +75,10 @@ export default function Home() {
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{
                             duration: 4,
-                            delay: 4,
+                            delay: 2,
                             ease: [0, 0.71, 0.2, 1.01],
                         }}
-                        className='grid grid-cols-2 mx-auto py-12 max-w-[550px] text-purple'
+                        className='flex flex-col gap-8 mx-auto p-8 md:mt-16 max-w-[550px] text-purple text-xl border border-black rounded-sm '
                     >
                         <div className='col-start-1'>
                             <p>
@@ -96,7 +87,7 @@ export default function Home() {
                                 det som det var dags att gå vidare!
                             </p>
                         </div>
-                        <div className='col-start-2 row-start-2'>
+                        <div className='col-start-2 row-start-1'>
                             <p>
                                 Hösten 2022 påbörjade jag en ny resa och i juni
                                 2024 fick jag ut mitt examensbevis som nybliven
@@ -106,17 +97,17 @@ export default function Home() {
                     </motion.div>
                 </div>
                 <div className='min-h-svh mx-auto'>
-                    <div className='flex flex-col items-center gap-4 px-4'>
-                        <div className='rounded-xl overflow-hidden self-start'>
+                    <div className='flex flex-col items-center gap-8 px-4 lg:flex-row'>
+                        <div className='rounded-xl overflow-hidden lg:h-96'>
                             <Image
                                 src='/selfportrait.jpg'
                                 alt='Foto av Annika utomhus.'
                                 width={150}
                                 height={0}
-                                style={{ height: "auto" }}
+                                style={{ height: "100%", width: "auto" }}
                             />
                         </div>
-                        <ul className='text-brown flex flex-col gap-y-3'>
+                        <ul className='text-brown text-xl flex flex-col gap-y-3 lg:self-end'>
                             {data.map((item) => (
                                 <PresentationListItem
                                     key={item.title}
@@ -137,25 +128,25 @@ const data = [
         description: "Annika Nylin",
     },
     {
-        title: "Kallas också för",
-        description: "Ankan",
+        title: "Yrkestitel",
+        description: "Frontend-utvecklare, Urmakarmästare",
     },
     {
-        title: "En riktig sommarbukett måste innehålla",
-        description: "Blåklockor och humleblomster",
-    },
-
-    {
-        title: "Konstnärer jag uppskattar",
-        description: "René Magritte, Kandinsky, Mats Bäcker, Eric Johansson",
-    },
-
-    {
-        title: "Favoritförfattare",
-        description: "Paul Auster, Maria Gripe",
+        title: "Styrkor",
+        description: "Envis, lojal, snäll.",
     },
     {
-        title: "Oanad talang",
-        description: "Kan binda flugor men har aldrig flugfiskat!",
+        title: "Intresserad av",
+        description: "Kommunikation, språk och bild.",
     },
+    {
+        title: "Gillar med frontend",
+        description: "Kombinationen av design och teknik.",
+    },
+    {
+        title: "Vill gärna jobba med i framtiden",
+        description: "Tillgänglighet",
+    },
+    /*{title:"",
+description: "",}, */
 ];

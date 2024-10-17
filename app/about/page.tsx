@@ -35,22 +35,16 @@ const AboutPage = () => {
                         delen av mitt liv.{" "}
                     </h2>
                     <p>
-                        Jag började i slutet på 80-talet i det som sedan blev
+                        Jag började i slutet på 80-talet i det som blev
                         Krokajo. Där lärde jag mig sångarglädje, att musik är
-                        lust och lekfullhet. Dessutom fick jag min första “lön”
-                        när jag medverkade på inspelningen av Majas
-                        Alfabetssånger! <br />
+                        lust och lekfullhet. <br />
                         <br /> Under tonåren sjöng jag i Nova Cantica i
                         Skoghall. Där fick jag lära mig disciplin, och att
-                        alltid ge 100% när man ger sig in i något. Jag fick
-                        också uppleva fantastiska klanger av afrikansk musik,
-                        med en resa runt i Tanzania som en av de största
-                        upplevelserna. <br />
+                        alltid ge 100% när man ger sig in i något. <br />
                         <br />
                         När jag flyttade till Skåne var jag del av den
                         nyskapande kören Saxenborn Singers där jag fick utveckla
-                        min sångteknik och vara del av processen när man jobbar
-                        konstnärligt med musiken genom flera intressanta
+                        min sångteknik och vara del av flera
                         uruppföranden i samarbeten med kompositörer och
                         performance artister.
                     </p>
@@ -74,7 +68,7 @@ const AboutPage = () => {
                         width={492.8}
                         height={326.4}
                         alt='Orange blommor i närbild'
-                        className="rounded-lg ml-10 mt-10" 
+                        className="rounded-sm ml-10 mt-10" 
                     />
                 </div>
             </div>
@@ -83,3 +77,33 @@ const AboutPage = () => {
 };
 
 export default AboutPage;
+
+
+const data = [
+    {
+        title: "Namn",
+        description: "Annika Nylin",
+    },
+    {
+        title: "Kallas också för",
+        description: "Ankan",
+    },
+    {
+        title: "En riktig sommarbukett måste innehålla",
+        description: "Blåklockor och humleblomster",
+    },
+
+    {
+        title: "Konstnärer jag uppskattar",
+        description: "René Magritte, Kandinsky, Mats Bäcker, Eric Johansson",
+    },
+
+    {
+        title: "Favoritförfattare",
+        description: "Paul Auster, Maria Gripe",
+    },
+    {
+        title: "Oanad talang",
+        description: "Kan binda flugor men har aldrig flugfiskat!",
+    },
+];

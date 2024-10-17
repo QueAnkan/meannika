@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 interface NavigationProps {
     // props
@@ -6,27 +9,30 @@ interface NavigationProps {
     link: string;
 }
 
-const Navigationlinks = ({ title, link }: NavigationProps) => (
-    <li>
+ export const Navigationlinks = ({ title, link }: NavigationProps) => (
+    <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
         <Link href={link}>{title}</Link>
-    </li>
+    </motion.li>
 );
 
-const Navigation = () => {
+
+
+export const Navigation = () => {
     return (
         <nav>
-            <ul className='flex gap-16 w-full justify-center text-2xl text-blue'>
-                {data.map((item) => (
+            <motion.ul className='flex gap-16 w-full justify-center text-2xl text-blue'
+            >
+                {navigationData.map((item) => (
                     <Navigationlinks key={item.title} {...item} />
                 ))}
-            </ul>
+            </motion.ul>
         </nav>
     );
 };
 
-export default Navigation;
+// export default Navigation;
 
-const data = [
+export const navigationData = [
     {
         title: "Mer om mig",
         link: "/about",
