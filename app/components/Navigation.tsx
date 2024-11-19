@@ -7,21 +7,21 @@ interface NavigationProps {
     // props
     title: string;
     link: string;
+    handleClick?: () => void;
 }
 
- export const Navigationlinks = ({ title, link }: NavigationProps) => (
+export const Navigationlinks = ({ title, link, handleClick }: NavigationProps) => (
     <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
-        <Link href={link}>{title}</Link>
+        <Link href={link} onClick={handleClick}>
+            {title}
+        </Link>
     </motion.li>
 );
-
-
 
 export const Navigation = () => {
     return (
         <nav>
-            <motion.ul className='flex gap-16 w-full justify-center text-2xl text-blue'
-            >
+            <motion.ul className='flex gap-16 w-full justify-center text-2xl text-blue'>
                 {navigationData.map((item) => (
                     <Navigationlinks key={item.title} {...item} />
                 ))}
