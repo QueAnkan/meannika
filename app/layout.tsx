@@ -21,10 +21,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${courier.className} relative antialiased w-full h-screen`}
+        className={`${courier.className} relative antialiased w-screen h-screen `}
         >
         <Header/>
-        <div className="pb-12 pt-28">
+        <div className="pb-12 pt-28 overflow-hidden">
         {children}
         </div>
         <Footer/>

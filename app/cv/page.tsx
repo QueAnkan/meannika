@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { RiArrowUpWideLine } from "react-icons/ri";
+import { RiArrowDownWideLine } from "react-icons/ri";
 
 const CvPage = () => {
     return (
@@ -42,16 +42,16 @@ const CVItems = ({ heading, item }: CVItemsProps) => {
 
     return (
         <li className='flex-1 flex flex-col justify-center items-center text-green'>
-            <div className='w-[600px] h-fit p-4 rounded-md border border-gray-500'>
+            <div className='w-96 sm:w-[600px] h-fit p-4 rounded-md border border-gray-500'>
                 <div
                     onClick={open}
                     className='cursor-pointer w-full flex justify-between items-center gap-3'
                 >
                     <h3>{heading}</h3>
                     <span className=' pb-1'>
-                        {!show && <RiArrowUpWideLine />}
+                        {!show && <RiArrowDownWideLine />}
                         {show && (
-                            <RiArrowUpWideLine className='transform rotate-180' />
+                            <RiArrowDownWideLine className='transform rotate-180' />
                         )}
                     </span>
                 </div>
@@ -64,7 +64,7 @@ const CVItems = ({ heading, item }: CVItemsProps) => {
                                 </h4>
 
                                 <span className='inline-block w-px bg-green'></span>
-                                <p>{item.year}</p>
+                                <p className="text-nowrap">{item.year}</p>
                             </div>
                             <p className=' text-purple'>{item.place}</p>
                             <p className=' text-purple'>{item.description}</p>
@@ -119,14 +119,14 @@ const data = [
                     "Praktisk och teoretisk utbildning i urmakeri (finmekanik), ritningslära, materiallära.",
             },
             {
-                title: "Kulturvetenskapligt basår ",
+                title: "Kulturvetenskap basår ",
                 year: "2000 - 2002",
                 place: "Linköpings Universitet, Linköping",
                 description:
                     "A-kurs i historia, konstvetenskap, litteraturvetenskap och filosofi",
             },
             {
-                title: "Specialutformat samhällsprogram med inriktning mot multimedia",
+                title: "Specialutformat samhällsprogram inriktning multimedia",
                 year: " 1997 - 2000",
                 place: "Sundsta/Älvkullegymnasiet, Karlstad",
                 description:

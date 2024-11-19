@@ -14,7 +14,7 @@ const ScrollDown = () => {
     return (
         <button
             onClick={handleScroll}
-            className='absolute h-20 right-10 md:right-16 bottom-10 md:bottom-44 '
+            className='absolute h-20 right-10 md:right-16 bottom-10 md:bottom-44 z-50'
         >
             <motion.div
                 initial={{ y: -20
