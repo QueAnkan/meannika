@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const AboutPage = () => {
     return (
-        <div className='relative py-32 px-4'>
+        <div className='relative pb-32 pt-20 px-4'>
             <h1 className='w-full text-center pb-16 text-green'>
                 Vem är jag?
             </h1>
@@ -53,10 +53,10 @@ const AboutPage = () => {
                     <h2 className=''>Naturen ger mig kraft</h2>
                     <p>
                         Naturen har alltid varit viktig för mig. Där hittar jag
-                        lugnet och kan ladda batterierna. Doften av skog, suset
-                        i träden och fågelkvitter. Men också att få använda det
+                        lugnet och kan ladda batterierna.<br /><br /> Doften av skog, suset
+                        i träden och fågelkvitter. Möjlighten att använda det
                         som naturen ger genom bär, svamp och det som odlas i min
-                        egen trädgård. Att få bo på landet har alltid lockat och
+                        egen trädgård. <br /><br />Att få bo på landet har alltid lockat och
                         jag älskar att göra det! Jag följer årstidernas
                         växlingar, ser när fåglarna kommer på våren och när de
                         samlas för att flytta söderut på hösten.

@@ -2,14 +2,14 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { PresentationListItem } from "./components/PresentationListItem";
-import { title } from "process";
+
 
 export default function Home() {
     return (
-        <div className='pb-32 pt- max-w-screen'>
+        <div className='pb-32 pt-20 max-w-screen'>
             <main className=' flex flex-col w-full'>
                 <div className='min-h-svh px-8 sm:px-28'>
-                    <div className='flex flex-col place-items-center mx-auto sm:grid grid-cols-12 sm:gap-2 '>
+                    <div className='flex flex-col place-items-center mx-auto sm:grid grid-cols-12 sm:gap-2 max-w-5xl'>
                         <motion.div
                             initial={{ opacity: 0, scale: 0.5 }}
                             animate={{ opacity: 1, scale: 1 }}
@@ -78,7 +78,7 @@ export default function Home() {
                             delay: 2,
                             ease: [0, 0.71, 0.2, 1.01],
                         }}
-                        className='flex flex-col gap-8 mx-auto p-8 md:mt-16 max-w-[550px] text-purple text-xl border border-black rounded-sm '
+                        className='flex flex-col gap-8 mx-auto p-8 md:mt-16 max-w-[550px] text-purple text-xl border border-black bg-black rounded-xl'
                     >
                         <div className='col-start-1'>
                             <p>
@@ -96,7 +96,7 @@ export default function Home() {
                         </div>
                     </motion.div>
                 </div>
-                <div className='min-h-svh mx-auto'>
+                <div className=' mx-auto'>
                     <div className='flex flex-col items-center gap-8 px-4 lg:flex-row'>
                         <div className='rounded-xl overflow-hidden lg:h-96'>
                             <Image

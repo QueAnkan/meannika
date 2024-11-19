@@ -2,7 +2,7 @@ import { ProjectItem } from "../components/ProjectItem";
 
 const OwnProjectsPage = () => {
     return (
-        <div className='relative py-32 min-h-svh'>
+        <div className='relative pb-32 pt-20 min-h-svh'>
             <h1 className='w-full text-center pb-16 text-green'>
                 Egna projekt
             </h1>
@@ -13,7 +13,9 @@ const OwnProjectsPage = () => {
                     ))}
                 </ul>
             </div>
-				<div className="absolute right-24 bottom-52"><p>Fler projekt kommer....</p></div>
+            <div className='absolute right-24 bottom-52'>
+                <p>Fler projekt kommer....</p>
+            </div>
         </div>
     );
 };

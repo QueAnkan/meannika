@@ -5,7 +5,7 @@ import { RiArrowUpWideLine } from "react-icons/ri";
 
 const CvPage = () => {
     return (
-        <div className='py-32 min-h-svh'>
+        <div className='pb-32 pt-20 min-h-svh'>
             <h1 className='w-full text-center text-green pb-16'>CV</h1>
             <div className='w-full mx-auto'>
                 <ul className='flex flex-wrap gap-16 justify-center mx-auto px-8 w-fit max-w-screen-lg '>

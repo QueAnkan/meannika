@@ -24,7 +24,7 @@ export default function RootLayout({
         className={`${courier.className} relative antialiased w-full h-screen`}
         >
         <Header/>
-        <div className="pb-12 pt-20">
+        <div className="pb-12 pt-28">
         {children}
         </div>
         <Footer/>
