@@ -8,8 +8,9 @@ import  { Navigationlinks, navigationData } from './Navigation';
 
 const Header = () => {
   return (
-	<header className='absolute w-screen h-28 
+	<header className='absolute w-screen h-28
 	bg-transparent flex justify-between items-center z-50 overflow-x-clip'>
+		<div className='flex justify-between items-center w-full h-full m-4'>
 		<Link href='/' alt="Till startsidan" >
 	 		<div className=' flex rounded-full w-20 h-20 overflow-hidden p-2 bg-blue m-4
 	  		'>
@@ -20,6 +21,7 @@ const Header = () => {
 		<div className=' relative z-60 w-fit h-full'>
 			<Hamburger/>
 		</div> 
+		</div>
 	</header>
   );
 }
@@ -42,9 +44,9 @@ const Hamburger = () => {
 	return (
 		
 
-		<div className='z-60 w-fit'>
+		<div className='z-60 w-fit -mr-16 overflow-hidden'>
 			
-			<div onClick={handleClick} className=' absolute  m-10 right-0 flex flex-col justify-between h-6 w-8 cursor-pointer '>
+			<div onClick={handleClick} className=' absolute m-8 right-0 flex flex-col justify-between h-6 w-8 cursor-pointer '>
 				<motion.div 
 				animate={isOpen ? {rotate: 45, translateY: 10} : {rotate: 0, translateY: 0}}
 				className='h-1 w-full rounded-full bg-blue '></motion.div>

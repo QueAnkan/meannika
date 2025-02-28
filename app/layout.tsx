@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-import ScrollDown from "./components/ScrollDown";
+// import ScrollDown from "./components/ScrollDown";
 import { courier } from "./fonts/fonts";
 
 
@@ -21,15 +21,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${courier.className} relative antialiased w-screen h-screen `}
+        className={`${courier.className} relative antialiased max-w-screen h-screen overflow-x-clip`}
         >
         <Header/>
-        <div className="pb-12 pt-28 overflow-hidden">
+        <div className="pb-12 pt-28 max-w-screen overflow-hidden">
         {children}
         </div>
         <Footer/>
-        <ScrollDown/>
-      </body>
+{/*         <ScrollDown/>
+ */}      </body>
     </html>
   );
 }
