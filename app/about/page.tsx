@@ -116,7 +116,7 @@ const imagedata = [
         alt: "Dimhöljt fält i solnedgång",
     },
     {
-        src: "/flowers.jpg",
+        src: "/orangeflowers.jpg",
         width: 492.8,
         height: 326.4,
         alt: "Orange blommor i närbild",
