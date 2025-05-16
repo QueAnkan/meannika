@@ -129,7 +129,7 @@ const imagedata = [
     },
 ];
 
-const data = [
+/* const data = [
     {
         title: "Namn",
         description: "Annika Nylin",
@@ -157,3 +157,4 @@ const data = [
         description: "Kan binda flugor men har aldrig flugfiskat!",
     },
 ];
+ */
