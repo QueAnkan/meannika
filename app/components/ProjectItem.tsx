@@ -1,7 +1,7 @@
 interface ProjectItemProps {
     title: string;
     description: string;
-    link: string;
+    link: string;   
 }
 
 export const ProjectItem = ({ title, description, link }: ProjectItemProps) => (
@@ -22,7 +22,7 @@ export const ProjectItem = ({ title, description, link }: ProjectItemProps) => (
             >
                 {description}
             </p>
-            <p>Kolla in:
+            <p className="text-brown">Kolla in:
                 <a
                     href={link}
                     target='_blank'

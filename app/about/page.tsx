@@ -2,8 +2,10 @@
 
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import Image from "next/image";
+import imagedata from "../../content/data.json";
 
 const AboutPage = () => {
+    const imageData = imagedata.imagedata;
     return (
         <div className='relative pb-32 pt-20 max-w-screen '>
             <h1 className='w-full text-center pb-16 text-green'>Vem är jag?</h1>
@@ -75,7 +77,7 @@ const AboutPage = () => {
             
                 <div className='aboslute left-0 top-0'>
                     <div className='flex gap-16 justify-center items-center flex-col mx-auto mt-8 px-8 py-16 w-screen bg-black md:flex-row'>
-                        {imagedata.map((item) => (
+                        {imageData.map((item) => (
                             <ImageContainer key={item.src} {...item} />
                         ))}
                     </div>
@@ -107,7 +109,7 @@ const ImageContainer = ({ src, width, height, alt }: ImageContainerProps) => {
         </div>
     );
 };
-
+/* 
 const imagedata = [
     {
         src: "/field.jpg",
@@ -127,7 +129,7 @@ const imagedata = [
         height: 326.4,
         alt: "Vinterlandskap genom frostig ruta",
     },
-];
+]; */
 
 /* const data = [
     {

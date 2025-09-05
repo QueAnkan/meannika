@@ -2,8 +2,10 @@
 
 import { useState } from "react";
 import { RiArrowDownWideLine } from "react-icons/ri";
+import cvdata from "../../content/data.json";
 
 const CvPage = () => {
+    const data = cvdata.cvdata;
     return (
         <div className='pb-32 pt-20 min-h-svh'>
             <h1 className='w-full text-center text-green pb-16'>CV</h1>
@@ -85,7 +87,7 @@ const CVItems = ({ heading, item }: CVItemsProps) => {
     );
 };
 
-const data = [
+/* const data = [
     {
         heading: "Arbetslivserfarenhet",
         item: [
@@ -250,3 +252,4 @@ const data = [
         ],
     },
 ];
+ */
