@@ -158,7 +158,7 @@ const data = [
         ],
     },
     {
-        heading: "Teknisk kompentens urmakeri",
+        heading: "Teknisk kompetens urmakeri",
         item: [
             {
                 title: "Finmekanik",
