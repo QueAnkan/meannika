@@ -3,6 +3,7 @@
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import Image from "next/image";
 import imagedata from "../../content/data.json";
+import RandomFact from "../components/RandomFacts";
 
 const AboutPage = () => {
     const imageData = imagedata.imagedata;
@@ -74,15 +75,19 @@ const AboutPage = () => {
                 </article>
                 <div className=' col-start-2 row-start-3'></div>
             </div>
-            
-                <div className='aboslute left-0 top-0'>
-                    <div className='flex gap-16 justify-center items-center flex-col mx-auto mt-8 px-8 py-16 w-screen bg-black md:flex-row'>
-                        {imageData.map((item) => (
-                            <ImageContainer key={item.src} {...item} />
-                        ))}
-                    </div>
+
+            <div className='aboslute left-0 top-0'>
+                <div className='flex gap-16 justify-center items-center flex-col mx-auto mt-8 px-8 py-16 w-screen bg-black md:flex-row'>
+                    {imageData.map((item) => (
+                        <ImageContainer key={item.src} {...item} />
+                    ))}
                 </div>
-           
+            </div>
+            <div className='max-w-[1024px] mx-auto px-4 mt-8'>
+                <div className=' mt-8 absolute left-0 bottom-0 w-full'>
+                    <RandomFact data={facts} />
+                </div>
+            </div>
         </div>
     );
 };
@@ -109,29 +114,8 @@ const ImageContainer = ({ src, width, height, alt }: ImageContainerProps) => {
         </div>
     );
 };
-/* 
-const imagedata = [
-    {
-        src: "/field.jpg",
-        width: 492.8,
-        height: 326.4,
-        alt: "Dimhöljt fält i solnedgång",
-    },
-    {
-        src: "/orangeflowers.jpg",
-        width: 492.8,
-        height: 326.4,
-        alt: "Orange blommor i närbild",
-    },
-    {
-        src: "/frosty.jpg",
-        width: 492.8,
-        height: 326.4,
-        alt: "Vinterlandskap genom frostig ruta",
-    },
-]; */
 
-/* const data = [
+const facts = [
     {
         title: "Namn",
         description: "Annika Nylin",
@@ -159,4 +143,3 @@ const imagedata = [
         description: "Kan binda flugor men har aldrig flugfiskat!",
     },
 ];
- */
