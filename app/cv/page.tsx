@@ -1,5 +1,6 @@
 "use client";
 
+import { sub } from "framer-motion/client";
 import { useState } from "react";
 import { RiArrowDownWideLine } from "react-icons/ri";
 
@@ -22,6 +23,8 @@ export default CvPage;
 
 interface CVItemsProps {
     heading: string;
+   
+
     item?: {
         title: string;
         year?: string;
@@ -90,9 +93,15 @@ const data = [
         item: [
             {
                 title: "Urmakare",
-                year: " 2006 - 2021",
+                year: "2006 - 2021",
                 place: "Bergströms Ur Malmö",
-                description: "",
+                description: "Bedömning, reparationer och service av klockor och smycken, ansvar för prissättning av service och reservdelar, kundkontakt, lagerhantering, orderhantering, underhåll av maskinpark och verktyg.",
+            },
+            {
+                title: "Lokalvårdare (timanställning)",
+                year: "2003 - 2005",
+                place: "ISS Facility Services, Linköping",
+                description: "Städning och underhåll av offentliga utrymmen (t ex parkeringshus), utrymmen inom tillverkande industri, kontor (inkl. verksamheter med viss säkerhetsklassning), förskole- och skolmiljöer",
             },
         ],
     },
@@ -103,7 +112,7 @@ const data = [
                 title: "Frontend-utvecklare",
                 year: "2022 - 2024",
                 place: "Folkuniversitetet Väst, Karlstad",
-                description: "",
+                description: "Kurser: UX/UI, HTML/CSS, agila arbetssätt, Frontendramverk, Backend (Node.js), molntjänster (AWS)",
             },
             {
                 title: "Mästarutbildning",
@@ -148,8 +157,63 @@ const data = [
         ],
     },
     {
+        heading: "Teknisk kompentens urmakeri",
+        item: [
+            {
+                
+                title: "Finmekanik",
+                description: "Erfarenhet av bedömning av slitagedelar, demontering/montering och funktionstester av mekaniska komponenter och konstruktioner med hög precision.",
+            },
+            {
+                title: "Ritningsläsning",
+                description: "Läst och tolkat tekniska ritningar i olika format, inklusive 2D-ritningar och 3D-modeller. Förståelse för måttsättning, toleranser och materialspecifikationer.",
+            },
+            {
+                title: "Materiallära",
+                description: "Förståelse för olika material och deras egenskaper, främst metaller och legeringar. Kunskap om materialval baserat på hållbarhet, korrosionsbeständighet och mekaniska egenskaper.",
+            },
+            {
+                title: "Verktygshantering",
+                description: "Erfarenhet av att använda specialiserade verktyg och maskiner för precisionsarbete, inklusive stereolupp, korntänger, skruvmejslar och andra finmekaniska verktyg.",
+            },
+            {
+                title: "Bearbetning av metaller",
+                description: "Kunskap om olika bearbetningstekniker för metaller, inklusive svarvning, polering, slipning och sandblästring. Förståelse för verktyg och maskiner som används inom metallbearbetning."
+            }
+
+        ],
+    },
+    {
+        heading: "Teknisk kompetens IT",
+        item: [ {
+            title: "Programmering",
+            description: "HTML, CSS, JavaScript och TypeScript. Förståelse för algoritmer och datastrukturer."
+        },
+        {
+            title: "Webbutveckling",
+            description: "React och Next.js för frontend och fullstack. Node.js och Express.js för backend. Erfarenhet av att bygga responsiva och användarvänliga gränssnitt."
+        },
+        {
+            title: "Dokumentationsverktyg / arbetsmetoder",
+            description: "GitHub för samarbete och versionshantering. Erfarenhet av agila arbetsmetoder (Scrum, Scrumban) och projektverktyg som Jira och Trello."
+        },
+        {
+            title: "Visualisering / designverktyg",
+            description: "Figma, Canva, Tailwind CSS, Framer Motion. Kunskap om UX-principer, målgruppsanalyser och användartester. Erfarenhet av data-visualisering med Chart.js."
+        },
+        {
+            title: "Molntjänster",
+            description: "Erfarenhet av AWS S3, Lambda, API Gateway, DynamoDB. Grundläggande förståelse för molninfrastruktur och tjänster."
+        },
+]
+    },
+    {
         heading: "Språkkunskaper",
         item: [
+            {
+                title: "Svenska",
+                description: "Modersmål",
+            },
             {
                 title: "Engelska",
                 description: "Goda kunskaper i tal och skrift",
